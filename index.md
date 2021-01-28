@@ -1,37 +1,45 @@
-## Welcome to GitHub Pages
+---
+layout: home
+title: Oracle Cloud Infrastructure Challenge
+description: A series of tests to prove your worthiness to work with a True Enterprise Cloud Provider
+---
 
-You can use the [editor on GitHub](https://github.com/vaishalinankani08/CloudNative-Observability/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+# About OCI
 
-### Markdown
+OCI stands for Oracle Cloud Infrastructure, 
+Oracle's Second Generation Cloud Infrastructure Truly Built for the Enterprise. Oracle Cloud Infrastructure was built from the ground up to perform better and more consistently than the competition, while costing less at scale. 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+<blockquote class="embedly-card"><h4><a href="https://cloud.oracle.com/en_US/iaas">IaaS - Enterprise Cloud - Oracle Cloud Infrastructure</a></h4><p>With Oracle Infrastructure as a Service (IaaS) you can migrate traditional mission-critical applications and build new cloud native applications with superior price-performance, on the same flexible network.</p></blockquote>
+<script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
 
-```markdown
-Syntax highlighted code block
+# Purpose
+This is a static site to help candidates to get information on the OCI Challenge under one roof. It contains
 
-# Header 1
-## Header 2
-### Header 3
+> Videos \\
+> Photos \\
+> Documents \\
+> Instructions \\
+> Manuals 
 
-- Bulleted
-- List
+to help candidates crack the challenge. All the best. Read on. 
 
-1. Numbered
-2. List
+# The Big Picture
 
-**Bold** and _Italic_ and `Code` text
+This entire test is a process of evaluating candidates who have the same passion that Oracle Cloud has 
 
-[Link](url) and ![Image](src)
-```
+> Building great Cloud Native Innovation. Scaling it reliably for the Enterprise. 
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+![](/assets/images/OracleCloudNative.png)
 
-### Jekyll Themes
+The Architecture of the application that will be deployed by the candidate on OCI 
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/vaishalinankani08/CloudNative-Observability/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+![Application](/assets/images/TBP.png)
 
-### Support or Contact
+# Phases 
+The completion of this challenge happens in phases, starting from a simple spinning up of a Kubernetes Cluster in OKE to creating the entire DevOps Cycle
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+> There is a bonus challenge which involves setting up of 
+> 1. `Slack` Notifications for Build and Deployment 🏆
+> 2. Setting up of Cluster Monitoring using `Prometheus` and `Grafana` 🏆
+> 3. Scale Kubernetes Cluster using `Slack` 🏆
