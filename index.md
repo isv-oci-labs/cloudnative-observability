@@ -1,8 +1,4 @@
----
-layout: home
-title: Oracle Cloud Infrastructure Challenge
-description: A series of tests to prove your worthiness to work with a True Enterprise Cloud Provider
----
+
 
 
 # About OCI
