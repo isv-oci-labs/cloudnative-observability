@@ -20,5 +20,14 @@ visualization of  the metric data collected by  prometheus.
  3.Set up the cluster access
 ![image](https://user-images.githubusercontent.com/77958988/106737640-eb7f6e00-663c-11eb-9bb1-31350f732107.png)
 
-
-
+ 4.Install kubectl
+ 
+```
+curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"
+chmod +x ./kubectl
+sudo mv ./kubectl /usr/local/bin/kubectl
+chmod 400 /home/opc/.kube/config
+```   
+5.Install helm as per the instruction at below mentioned url
+https://helm.sh/docs/intro/install/
+6.
