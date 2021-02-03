@@ -61,3 +61,11 @@ Example username:
 username:bme8mxy3zkua/oracleidentitycloudservice/vaishali.nankani@oracle.com
 password:authtoken generated in step 9
 ```
+11.tag docker images appropriately using the tenancynamespace and preferred OCIR registry name
+```
+sudo docker tag vaishalinankani08/vegeta:test <region>.ocir.io/<tenancynamespace>/testimages/vegeta:test
+sudo docker tag vaishalinankani08/votingservice:perf <region>.ocir.io/<tenancynamespace>/testimages/votingservice:perf
+example:
+sudo docker tag vaishalinankani08/vegeta:test ap-mumbai-1.ocir.io/bme8mxy3zkua/testimages/vegeta:test
+sudo docker tag vaishalinankani08/votingservice:perf ap-mumbai-1.ocir.io/bme8mxy3zkua/testimages/votingservice:perf
+```
