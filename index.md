@@ -11,6 +11,13 @@ visualization of  the metric data collected by  prometheus.
 # Steps
 (1)setup a kubernetes cluster with 3 worker nodes using OKE.
 
-(2)Install oci-cli
+(2)Install oci-cli using below commands
+   bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"
+   oci -v
+   oci set config
+(3)
+
+mkdir -p $HOME/.kube
+oci ce cluster create-kubeconfig --cluster-id ocid1.cluster.oc1.iad.aaaaaaaaae3wkyrxge2tonrvmuztin3egbrgknrsme2demjvmcydqnrrgayt --file $HOME/.kube/config --region us-ashburn-1 --token-version 2.0.0 
 
 
