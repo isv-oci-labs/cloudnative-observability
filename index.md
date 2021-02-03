@@ -44,3 +44,4 @@ sudo docker pull vaishalinankani08/votingservice:test
 sudo docker pull vaishalinankani08/votingservice:perf
 
 9.Push these images to the OCIR docker registry
+![image](https://user-images.githubusercontent.com/77958988/106740792-e3c1c880-6640-11eb-9bf8-9e03efc0cd84.png)
