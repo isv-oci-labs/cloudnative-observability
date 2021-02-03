@@ -30,4 +30,17 @@ chmod 400 /home/opc/.kube/config
 ```   
 5.Install helm as per the instruction at below mentioned url
 https://helm.sh/docs/intro/install/
-6.
+
+6.Install metric server as per the instruction at below mentioned url
+https://github.com/kubernetes-sigs/metrics-server
+
+7.Install docker engine on bashion host as per the instruction at below mentioned url
+https://blogs.oracle.com/virtualization/install-docker-on-oracle-linux-7-v2
+
+8.Pull docker image from docker hub
+
+sudo docker login -u vaishalinankani08
+sudo docker pull vaishalinankani08/votingservice:test
+sudo docker pull vaishalinankani08/votingservice:perf
+
+9.Push these images to the OCIR docker registry
