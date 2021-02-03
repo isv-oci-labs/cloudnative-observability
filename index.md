@@ -51,7 +51,8 @@ sudo docker pull vaishalinankani08/votingservice:perf
 ![image](https://user-images.githubusercontent.com/77958988/106743873-f0e0b680-6644-11eb-9f65-bc714796b8b7.png)
 
 10.Login to docker registry
+```
 sudo docker login <region>.ocir.io
 example:
 sudo docker login ap-mumbai-1.ocir.io
-
+```
