@@ -55,8 +55,9 @@ sudo docker pull vaishalinankani08/votingservice:perf
 sudo docker login <region>.ocir.io
 example:
 sudo docker login ap-mumbai-1.ocir.io
+#enter username as per the below format
 username:<tenancynamespace>/<username>
-example:
+Example username:
 username:bme8mxy3zkua/oracleidentitycloudservice/vaishali.nankani@oracle.com
 password:authtoken generated in step 9
 ```
