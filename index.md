@@ -81,9 +81,37 @@ sudo docker push ap-mumbai-1.ocir.io/bme8mxy3zkua/testimages/vegeta:test
 13. Create namespace for application deployment.
  kubectl create namespace app
 14. Create kubernetes secret for accessing the secured image from OCIR registry
- kubectl create secret -n app docker-registry <secret-name> --docker-server=<region-id>.ocir.io --docker-username='<cloud-account-username>' --docker-password='<auth-token>' --docker-email='<cloud-account-emailid>'
+
  ````
+kubectl create secret -n app docker-registry <secret-name> --docker-server=<region-id>.ocir.io --docker-username='<cloud-account-username>' --docker-password='<auth-token>' --docker-email='<cloud-account-emailid>'
  example:
 kubectl create secret -n app docker-registry ocirsecret --docker-server=ap-mumbai-1.ocir.io --docker-username='bme8mxy3zkua/oracleidentitycloudservice/vaishali.nankani@oracle.com' --docker-password='NhgP<5dlL3:>yfXViLpt' --docker-email='vaishali.nankani@oracle.com'
   ````
+15.Pick the deployment file for the application and execute below command. Execute kubectl commands to verify that deployment and service resources are created appropriately
+```
+kubectl create -f votingApp.yaml
+Verify that kubernetes resources are created successfully using below commands
+kubectl get pods -n app
+kubectl get services -n app
+````
+16. Create kubernetes secret in namespace where vegeta will be deployed.In this hands-on lab we are deploying it on default namespace 
+    kubernetes secret should be present in same namespace as the deployment that uses it.
+
+````
+kubectl create secret -n default docker-registry <secret-name> --docker-server=<region-id>.ocir.io --docker-username='<cloud-account-username>' --docker-password='<auth-token>' --docker-email='<cloud-account-emailid>'
+ example:
+kubectl create secret -n default docker-registry ocirsecret --docker-server=ap-mumbai-1.ocir.io --docker-username='bme8mxy3zkua/oracleidentitycloudservice/vaishali.nankani@oracle.com' --docker-password='NhgP<5dlL3:>yfXViLpt' --docker-email='vaishali.nankani@oracle.com'
+````
+17.Pick the deployment file for the vegeta load testing tool and execute below command. Execute kubectl commands to verify that deployment and service resources are created appropriately
+````
+kubectl create -f vegeta.yaml
+````
+18.copy targets.txt,json file's representing rest api's and vegeta binary in vegeta pod at path /tmp.
+````
+ kubectl cp vegeta default/http-client:/tmp/vegeta
+ kubectl cp targets.txt default/http-client:/tmp/targets.txt
+ kubectl cp addvoter.json default/http-client:/tmp/addvoter.json
+ kubectl cp addvoter_badreq.json default/http-client:/tmp/addvoter_badreq.json
+````
+
  
