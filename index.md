@@ -28,9 +28,13 @@ chmod +x ./kubectl
 sudo mv ./kubectl /usr/local/bin/kubectl
 chmod 400 /home/opc/.kube/config
 ```   
-5.Install helm as per the instruction at below mentioned url
+5.Install helm version 3 as per the instruction at below mentioned url
 https://helm.sh/docs/intro/install/
-
+```
+$ curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+$ chmod 700 get_helm.sh
+$ ./get_helm.sh
+```
 6.Install metric server as per the instruction at below mentioned url
 https://github.com/kubernetes-sigs/metrics-server
 
@@ -61,7 +65,7 @@ Example username:
 username:bme8mxy3zkua/oracleidentitycloudservice/vaishali.nankani@oracle.com
 password:authtoken generated in step 9
 ```
-11.tag docker images appropriately using the tenancynamespace and preferred OCIR registry name
+11. Tag docker images appropriately using the tenancynamespace and preferred OCIR registry name
 ```
 sudo docker tag vaishalinankani08/vegeta:test <region>.ocir.io/<tenancynamespace>/testimages/vegeta:test
 sudo docker tag vaishalinankani08/votingservice:perf <region>.ocir.io/<tenancynamespace>/testimages/votingservice:perf
@@ -69,3 +73,17 @@ example:
 sudo docker tag vaishalinankani08/vegeta:test ap-mumbai-1.ocir.io/bme8mxy3zkua/testimages/vegeta:test
 sudo docker tag vaishalinankani08/votingservice:perf ap-mumbai-1.ocir.io/bme8mxy3zkua/testimages/votingservice:perf
 ```
+12. Push docker images to OCIR registry
+sudo docker push <region>.ocir.io/<tenancynamespace>/testimages/vegeta:tes
+example
+sudo docker push ap-mumbai-1.ocir.io/bme8mxy3zkua/testimages/votingservice:perf
+sudo docker push ap-mumbai-1.ocir.io/bme8mxy3zkua/testimages/vegeta:test
+13. Create namespace for application deployment.
+ kubectl create namespace app
+14. Create kubernetes secret for accessing the secured image from OCIR registry
+ kubectl create secret -n app docker-registry <secret-name> --docker-server=<region-id>.ocir.io --docker-username='<cloud-account-username>' --docker-password='<auth-token>' --docker-email='<cloud-account-emailid>'
+ ````
+ example:
+kubectl create secret -n app docker-registry ocirsecret --docker-server=ap-mumbai-1.ocir.io --docker-username='bme8mxy3zkua/oracleidentitycloudservice/vaishali.nankani@oracle.com' --docker-password='NhgP<5dlL3:>yfXViLpt' --docker-email='vaishali.nankani@oracle.com'
+  ````
+ 
