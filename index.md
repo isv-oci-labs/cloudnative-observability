@@ -65,7 +65,7 @@ Example username:
 username:bme8mxy3zkua/oracleidentitycloudservice/vaishali.nankani@oracle.com
 password:authtoken generated in step 9
 ```
-11. Tag docker images appropriately using the tenancynamespace and preferred OCIR registry name
+11.Tag docker images appropriately using the tenancynamespace and preferred OCIR registry name
 ```
 sudo docker tag vaishalinankani08/vegeta:test <region>.ocir.io/<tenancynamespace>/testimages/vegeta:test
 sudo docker tag vaishalinankani08/votingservice:perf <region>.ocir.io/<tenancynamespace>/testimages/votingservice:perf
@@ -73,14 +73,14 @@ example:
 sudo docker tag vaishalinankani08/vegeta:test ap-mumbai-1.ocir.io/bme8mxy3zkua/testimages/vegeta:test
 sudo docker tag vaishalinankani08/votingservice:perf ap-mumbai-1.ocir.io/bme8mxy3zkua/testimages/votingservice:perf
 ```
-12. Push docker images to OCIR registry
+12.Push docker images to OCIR registry
 sudo docker push <region>.ocir.io/<tenancynamespace>/testimages/vegeta:tes
 example
 sudo docker push ap-mumbai-1.ocir.io/bme8mxy3zkua/testimages/votingservice:perf
 sudo docker push ap-mumbai-1.ocir.io/bme8mxy3zkua/testimages/vegeta:test
-13. Create namespace for application deployment.
+13.Create namespace for application deployment.
  kubectl create namespace app
-14. Create kubernetes secret for accessing the secured image from OCIR registry
+14.Create kubernetes secret for accessing the secured image from OCIR registry
 
  ````
 kubectl create secret -n app docker-registry <secret-name> --docker-server=<region-id>.ocir.io --docker-username='<cloud-account-username>' --docker-password='<auth-token>' --docker-email='<cloud-account-emailid>'
@@ -94,7 +94,7 @@ Verify that kubernetes resources are created successfully using below commands
 kubectl get pods -n app
 kubectl get services -n app
 ````
-16. Create kubernetes secret in namespace where vegeta will be deployed.In this hands-on lab we are deploying it on default namespace 
+16.Create kubernetes secret in namespace where vegeta will be deployed.In this hands-on lab we are deploying it on default namespace 
     kubernetes secret should be present in same namespace as the deployment that uses it.
 
 ````
@@ -106,12 +106,27 @@ kubectl create secret -n default docker-registry ocirsecret --docker-server=ap-m
 ````
 kubectl create -f vegeta.yaml
 ````
-18.copy targets.txt,json file's representing rest api's and vegeta binary in vegeta pod at path /tmp.
+18.Copy targets.txt,json file's representing rest api's and vegeta binary in vegeta pod at path /tmp.
 ````
  kubectl cp vegeta default/http-client:/tmp/vegeta
  kubectl cp targets.txt default/http-client:/tmp/targets.txt
  kubectl cp addvoter.json default/http-client:/tmp/addvoter.json
  kubectl cp addvoter_badreq.json default/http-client:/tmp/addvoter_badreq.json
 ````
+19.Install prometheus in kubernetes cluster so as to fetch application metrics from application
+````
+#Installation of prometheus using corresponding helm chart
+helm repo add stable https://charts.helm.sh/stable
+helm install  prometheus stable/prometheus
+#Edit serviceType to loadBalancer in service resource
+kubectl edit svc prometheus-server -n default
+service.beta.kubernetes.io/oci-load-balancer-shape: 10Mbps
+````
+20. Install grafana in kubernetes cluster so as to visualize application statistics
+````
+#Add helm repository
+ helm repo add grafana https://grafana.github.io/helm-charts
+#Installation of grafana using corresponding helm chart
+ helm install  grafana stable/grafana
+````
 
- 
