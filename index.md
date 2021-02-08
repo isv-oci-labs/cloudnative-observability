@@ -125,14 +125,19 @@ kubectl edit svc prometheus-server -n default
 #Add this annotation in the annotations section of the service resource
 service.beta.kubernetes.io/oci-load-balancer-shape: 10Mbps
 ````
+![oci_prometheus](https://user-images.githubusercontent.com/77958988/107274095-01929180-6a76-11eb-8de8-4fec89379f58.png)
 21.Install grafana in kubernetes cluster so as to visualize application statistics
 ````
 #Add helm repository
  helm repo add grafana https://grafana.github.io/helm-charts
 #Installation of grafana using corresponding helm chart
  helm install  grafana stable/grafana
+ ````
 22. Edit serviceType to loadBalancer in grafana service resource
+````
  kubectl edit svc grafana -n default
  service.beta.kubernetes.io/oci-load-balancer-shape: 10Mbps
 ````
+![oci_grafana_screen](https://user-images.githubusercontent.com/77958988/107274579-9a291180-6a76-11eb-82cc-e8ced78d707c.png)
+
 
