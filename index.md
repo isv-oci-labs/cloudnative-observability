@@ -118,15 +118,21 @@ kubectl create -f vegeta.yaml
 #Installation of prometheus using corresponding helm chart
 helm repo add stable https://charts.helm.sh/stable
 helm install  prometheus stable/prometheus
-#Edit serviceType to loadBalancer in service resource
+````
+20.Edit serviceType to loadBalancer in prometheus service resource using below command
+````
 kubectl edit svc prometheus-server -n default
+#Add this annotation in the annotations section of the service resource
 service.beta.kubernetes.io/oci-load-balancer-shape: 10Mbps
 ````
-20. Install grafana in kubernetes cluster so as to visualize application statistics
+21.Install grafana in kubernetes cluster so as to visualize application statistics
 ````
 #Add helm repository
  helm repo add grafana https://grafana.github.io/helm-charts
 #Installation of grafana using corresponding helm chart
  helm install  grafana stable/grafana
+22. Edit serviceType to loadBalancer in grafana service resource
+ kubectl edit svc grafana -n default
+ service.beta.kubernetes.io/oci-load-balancer-shape: 10Mbps
 ````
 
