@@ -147,9 +147,12 @@ service.beta.kubernetes.io/oci-load-balancer-shape: 10Mbps
 kubectl get svc -n default
 ````
 ![image](https://user-images.githubusercontent.com/77958988/107332763-99c26200-6ada-11eb-9dd9-63f25cf51654.png)
-24.run script traffic_run.sh in one terminal to pump the traffic and in another terminal execute this command to verify that
+24.run script [traffic_run.sh](https://github.com/vaishalinankani08/CloudNative-Observability/blob/gh-pages/traffic_run.sh) in one terminal to pump the traffic and in another terminal execute this command to verify that
 application metrics are exposed at /actuator/prometheus
 ````
+#terminal1
+./traffic_run.sh
+#terminal2
 kubectl exec <podname>  -n app -- curl -X GET  "http://voting-app.app.svc.cluster.local:8080/actuator/prometheus" -H "Content-Type: application/json" | grep "votingService"
 example
 kubectl exec voting-app-6c4b5fd885-phpq5  -n app -- curl -X GET  "http://voting-app.app.svc.cluster.local:8080/actuator/prometheus" -H "Content-Type: application/json" | grep "votingService"
