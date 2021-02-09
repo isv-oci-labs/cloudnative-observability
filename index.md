@@ -158,7 +158,10 @@ kubectl exec voting-app-6c4b5fd885-phpq5  -n app -- curl -X GET  "http://voting-
 kubectl get svc -n default
 ````
 ![image](https://user-images.githubusercontent.com/77958988/107332763-99c26200-6ada-11eb-9dd9-63f25cf51654.png)
-25.open prometheus GUI and grafana GUI using the public IP addresses noted from command in step 24
+25.Open prometheus GUI and grafana GUI using the public IP addresses noted from command in step 24
 ![prometheus](https://user-images.githubusercontent.com/77958988/107337398-4f43e400-6ae0-11eb-8c6d-b4c7d5455d33.png)
 
 ![image](https://user-images.githubusercontent.com/77958988/107337178-03913a80-6ae0-11eb-9144-1b5cdc4e7249.png)
+26.Verify that prometheus is able to scrape metrics from application pods by searching metric name in prometheus console
+![image](https://user-images.githubusercontent.com/77958988/107338723-e3627b00-6ae1-11eb-81ac-0ff7300e4bca.png)
+27.write the expressions for request rate and response success rate using aplication metrics
