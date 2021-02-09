@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "http-client"
+  labels:
+    app: "http-client"
+spec:
+  containers:
+  - name: http-client
+    image: "ap-mumbai-1.ocir.io/bme8mxy3zkua/testimages/vegeta:test"
+    command: ["/bin/bash","-c","tail -f /dev/null"]
+  imagePullSecrets:
+    - name: ocirsecret
+  restartPolicy: Never
