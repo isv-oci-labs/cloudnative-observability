@@ -1,0 +1,5 @@
+GET http://voting-app.app.svc.cluster.local:8080/voting-service/v1/candidates
+
+PUT http://voting-app.app.svc.cluster.local:8080/voting-service/v1/voters/847938974478
+Content-Type: application/json
+@/tmp/addvoter.json
