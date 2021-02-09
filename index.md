@@ -168,7 +168,7 @@ kubectl get svc -n default
 ![image](https://user-images.githubusercontent.com/77958988/107337178-03913a80-6ae0-11eb-9144-1b5cdc4e7249.png)
 26.Verify that prometheus is able to scrape metrics from application pods by searching metric name in prometheus console
 ![image](https://user-images.githubusercontent.com/77958988/107338723-e3627b00-6ae1-11eb-81ac-0ff7300e4bca.png)
-27.write the expressions for request rate and response success rate based on aplication metrics to verify that 
+27.Write the expressions for request rate and response success rate based on aplication metrics to verify that 
 expressions are syntactically correct.
 
 Expression for Registration Rate:
@@ -183,8 +183,12 @@ sum(rate(votingService_voterRegistration_tx_responses_total{HttpStatusCode=~"2.*
 ![image](https://user-images.githubusercontent.com/77958988/107340205-8071e380-6ae3-11eb-8e05-252e1b3828f9.png)
 
 
-28.grafana password needs to be decoded from kubernetes secret resource.use below command to extract the initial password and decode it using [base64decode](https://www.base64decode.org/)
+28.Grafana password needs to be decoded from kubernetes secret resource.use below command to extract the initial password and decode it using [base64decode](https://www.base64decode.org/)
 ````
 kubectl edit secret grafana -n default
 ````
 ![image](https://user-images.githubusercontent.com/77958988/107355118-0c403b80-6af5-11eb-98cc-48b6ba95ad0e.png)
+
+![base64decode](https://user-images.githubusercontent.com/77958988/107393868-4293b000-6b21-11eb-8e8b-2108f3d7f677.png)
+Use the decoded password to login to the grafana with username as admin.change the grafana loginpassword
+29.
