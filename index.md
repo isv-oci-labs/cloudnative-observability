@@ -203,7 +203,7 @@ Use the decoded password to login to the grafana with username as admin.change t
   ![grafanaimport](https://user-images.githubusercontent.com/77958988/107408156-98bc1f80-6b30-11eb-8ef3-487caf2f10f4.png)
 
 
-  ![image](https://user-images.githubusercontent.com/77958988/107411055-146b9b80-6b34-11eb-969d-c7fddb08ccad.png)
+  ![image](https://user-images.githubusercontent.com/77958988/107411272-5ac0fa80-6b34-11eb-80fa-d4d2b6c08449.png)
 
   
   ![image](https://user-images.githubusercontent.com/77958988/107409810-8e9b2080-6b32-11eb-9dc1-a7a852ddc8ac.png)
