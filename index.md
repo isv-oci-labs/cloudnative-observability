@@ -194,6 +194,8 @@ kubectl edit secret grafana -n default
 decode password using [base64decode](https://www.base64decode.org/)
 
 ![base64decode](https://user-images.githubusercontent.com/77958988/107393868-4293b000-6b21-11eb-8e8b-2108f3d7f677.png)
+
+
 Use the decoded password to login to the grafana with username as admin.change the grafana loginpassword
 
 ![grafanachan](https://user-images.githubusercontent.com/77958988/107396227-97382a80-6b23-11eb-956a-d3a5c460f435.png)
