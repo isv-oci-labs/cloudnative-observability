@@ -103,7 +103,8 @@ kubectl create secret -n default docker-registry <secret-name> --docker-server=<
  example:
 kubectl create secret -n default docker-registry ocirsecret --docker-server=ap-mumbai-1.ocir.io --docker-username='bme8mxy3zkua/oracleidentitycloudservice/vaishali.nankani@oracle.com' --docker-password='NhgP<5dlL3:>yfXViLpt' --docker-email='vaishali.nankani@oracle.com'
 ````
-17.Pick the deployment file for the vegeta load testing tool and execute below command. Execute kubectl commands to verify that deployment and service resources are created appropriately
+17.Pick the deployment file for the vegeta load testing tool  [vegeta.yaml](https://github.com/vaishalinankani08/CloudNative-Observability/blob/gh-pages/vegeta.yaml)
+Execute below command. Execute kubectl commands to verify that deployment and service resources are created appropriately
 ````
 kubectl create -f vegeta.yaml
 ````
