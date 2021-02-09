@@ -185,11 +185,13 @@ sum(rate(votingService_voterRegistration_tx_responses_total{HttpStatusCode=~"2.*
 ![image](https://user-images.githubusercontent.com/77958988/107340205-8071e380-6ae3-11eb-8e05-252e1b3828f9.png)
 
 
-28.Grafana password needs to be decoded from kubernetes secret resource.use below command to extract the initial password and decode it using [base64decode](https://www.base64decode.org/)
+28.Grafana password needs to be decoded from kubernetes secret resource and use below command to extract the initial password .
 ````
 kubectl edit secret grafana -n default
 ````
 ![image](https://user-images.githubusercontent.com/77958988/107355118-0c403b80-6af5-11eb-98cc-48b6ba95ad0e.png)
+
+decode password using [base64decode](https://www.base64decode.org/)
 
 ![base64decode](https://user-images.githubusercontent.com/77958988/107393868-4293b000-6b21-11eb-8e8b-2108f3d7f677.png)
 Use the decoded password to login to the grafana with username as admin.change the grafana loginpassword
