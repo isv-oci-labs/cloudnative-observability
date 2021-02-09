@@ -195,7 +195,8 @@ Use the decoded password to login to the grafana with username as admin.change t
 ![grafanachan](https://user-images.githubusercontent.com/77958988/107396227-97382a80-6b23-11eb-956a-d3a5c460f435.png)
 
 
-![image](https://user-images.githubusercontent.com/77958988/107395646-03fef500-6b23-11eb-86de-4358925b211e.png)
+![image](https://user-images.githubusercontent.com/77958988/107403913-ae7b1600-6b2b-11eb-8689-89c54c50a3bc.png)
+
 
 29.
 
