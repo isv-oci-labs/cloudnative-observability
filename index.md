@@ -74,10 +74,12 @@ sudo docker tag vaishalinankani08/vegeta:test ap-mumbai-1.ocir.io/bme8mxy3zkua/t
 sudo docker tag vaishalinankani08/votingservice:perf ap-mumbai-1.ocir.io/bme8mxy3zkua/testimages/votingservice:perf
 ```
 12.Push docker images to OCIR registry
+````
 sudo docker push <region>.ocir.io/<tenancynamespace>/testimages/vegeta:tes
 example
 sudo docker push ap-mumbai-1.ocir.io/bme8mxy3zkua/testimages/votingservice:perf
 sudo docker push ap-mumbai-1.ocir.io/bme8mxy3zkua/testimages/vegeta:test
+````
 13.Create namespace for application deployment.
  kubectl create namespace app
 14.Create kubernetes secret for accessing the secured image from OCIR registry
