@@ -150,5 +150,7 @@ kubectl get svc -n default
 24.run script traffic_run.sh in one terminal to pump the traffic and in another terminal execute this command to verify that
 application metrics are exposed at /actuator/prometheus
 ````
+kubectl exec <podname>  -n app -- curl -X GET  "http://voting-app.app.svc.cluster.local:8080/actuator/prometheus" -H "Content-Type: application/json" | grep "votingService"
+example
 kubectl exec voting-app-6c4b5fd885-phpq5  -n app -- curl -X GET  "http://voting-app.app.svc.cluster.local:8080/actuator/prometheus" -H "Content-Type: application/json" | grep "votingService"
 ````
