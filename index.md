@@ -152,6 +152,7 @@ application metrics are exposed at /actuator/prometheus
 ![image](https://user-images.githubusercontent.com/77958988/107339421-ad71c680-6ae2-11eb-80b6-efb7a4180075.png)
 
 #terminal2
+````
 kubectl exec <podname>  -n app -- curl -X GET  "http://voting-app.app.svc.cluster.local:8080/actuator/prometheus" -H "Content-Type: application/json" | grep "votingService"
 example
 kubectl exec voting-app-6c4b5fd885-phpq5  -n app -- curl -X GET  "http://voting-app.app.svc.cluster.local:8080/actuator/prometheus" -H "Content-Type: application/json" | grep "votingService"
