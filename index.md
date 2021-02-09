@@ -148,6 +148,9 @@ application metrics are exposed at /actuator/prometheus
 ````
 #terminal1
 ./traffic_run.sh
+````
+![image](https://user-images.githubusercontent.com/77958988/107339421-ad71c680-6ae2-11eb-80b6-efb7a4180075.png)
+
 #terminal2
 kubectl exec <podname>  -n app -- curl -X GET  "http://voting-app.app.svc.cluster.local:8080/actuator/prometheus" -H "Content-Type: application/json" | grep "votingService"
 example
@@ -164,4 +167,9 @@ kubectl get svc -n default
 ![image](https://user-images.githubusercontent.com/77958988/107337178-03913a80-6ae0-11eb-9144-1b5cdc4e7249.png)
 26.Verify that prometheus is able to scrape metrics from application pods by searching metric name in prometheus console
 ![image](https://user-images.githubusercontent.com/77958988/107338723-e3627b00-6ae1-11eb-81ac-0ff7300e4bca.png)
-27.write the expressions for request rate and response success rate using aplication metrics
+27.write the expressions for request rate and response success rate based on aplication metrics to verify that 
+expressions are syntactically correct.
+
+![image](https://user-images.githubusercontent.com/77958988/107339889-30931c80-6ae3-11eb-9dbd-cbf231563c8b.png)
+
+![image](https://user-images.githubusercontent.com/77958988/107340205-8071e380-6ae3-11eb-8e05-252e1b3828f9.png)
