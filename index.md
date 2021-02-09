@@ -203,7 +203,8 @@ Use the decoded password to login to the grafana with username as admin.change t
   
    Upload  [votingApp](https://github.com/vaishalinankani08/CloudNative-Observability/blob/gh-pages/votingservice.json) dashboard json file
   ![grafanaimport](https://user-images.githubusercontent.com/77958988/107408156-98bc1f80-6b30-11eb-8ef3-487caf2f10f4.png)
-
+   
+   Panels for Registration Rate,Registration Success Rate as well as Container CPU & Memory
 
   ![image](https://user-images.githubusercontent.com/77958988/107411272-5ac0fa80-6b34-11eb-80fa-d4d2b6c08449.png)
 
