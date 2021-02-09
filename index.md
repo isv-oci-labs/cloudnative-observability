@@ -199,10 +199,9 @@ Use the decoded password to login to the grafana with username as admin.change t
 29.Import json dashborad for application
   ![image](https://user-images.githubusercontent.com/77958988/107405450-59400400-6b2d-11eb-87fb-a4beb8d9fdb2.png)
   
+   Upload  [votingApp-dashboard](https://github.com/vaishalinankani08/CloudNative-Observability/blob/gh-pages/votingservice.json) json file
   ![grafanaimport](https://user-images.githubusercontent.com/77958988/107408156-98bc1f80-6b30-11eb-8ef3-487caf2f10f4.png)
 
 
-   Use below json file 
-   [votingApp-dashboard](https://github.com/vaishalinankani08/CloudNative-Observability/blob/gh-pages/votingservice.json)
    
 30.
