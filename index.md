@@ -135,11 +135,20 @@ service.beta.kubernetes.io/oci-load-balancer-shape: 10Mbps
 #Installation of grafana using corresponding helm chart
  helm install  grafana stable/grafana
  ````
-22. Edit serviceType to loadBalancer in grafana service resource
+22. Edit serviceType to loadBalancer in grafana service resource/actuator/prometheus
 ````
  kubectl edit svc grafana -n default
  service.beta.kubernetes.io/oci-load-balancer-shape: 10Mbps
 ````
 ![oci_grafana_screen](https://user-images.githubusercontent.com/77958988/107274579-9a291180-6a76-11eb-82cc-e8ced78d707c.png)
 
-
+23.Check the public IP Address assigned to prometheus and grafana loadbalancer service type using below command.
+````
+kubectl get svc -n default
+````
+![image](https://user-images.githubusercontent.com/77958988/107332763-99c26200-6ada-11eb-9dd9-63f25cf51654.png)
+24.run script traffic_run.sh in one terminal to pump the traffic and in another terminal execute this command to verify that
+application metrics are exposed at /actuator/prometheus
+````
+kubectl exec voting-app-6c4b5fd885-phpq5  -n app -- curl -X GET  "http://voting-app.app.svc.cluster.local:8080/actuator/prometheus" -H "Content-Type: application/json" | grep "votingService"
+````
