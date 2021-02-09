@@ -170,6 +170,7 @@ kubectl get svc -n default
 ![image](https://user-images.githubusercontent.com/77958988/107338723-e3627b00-6ae1-11eb-81ac-0ff7300e4bca.png)
 27.write the expressions for request rate and response success rate based on aplication metrics to verify that 
 expressions are syntactically correct.
+
 Expression:
 ````
 sum(rate(votingService_voterRegistration_rx_requests_total{app_kubernetes_io_name="voting-app",kubernetes_namespace="$namespace"}[5m]))
