@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: voting-app
+  namespace: app
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: voting-app
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: voting-app
+      annotations:
+        prometheus.io/scrape: 'true'
+        prometheus.io/port: '8080'
+        prometheus.io/path: /actuator/prometheus
+    spec:
+      containers:
+      - name: voting-app
+        image: ap-mumbai-1.ocir.io/bme8mxy3zkua/testimages/votingservice:perf
+      imagePullSecrets:
+        - name: ocirsecret
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: voting-app
+  namespace: app
+  labels:
+    app.kubernetes.io/name: voting-app
+spec:
+  ports:
+  - port: 8080
+    targetPort: 8080
+  selector:
+    app.kubernetes.io/name: voting-app
