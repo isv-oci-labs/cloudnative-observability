@@ -187,4 +187,4 @@ sum(rate(votingService_voterRegistration_tx_responses_total{HttpStatusCode=~"2.*
 ````
 kubectl edit secret grafana -n default
 ````
-
+![image](https://user-images.githubusercontent.com/77958988/107355118-0c403b80-6af5-11eb-98cc-48b6ba95ad0e.png)
