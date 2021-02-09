@@ -108,7 +108,7 @@ Execute below command. Execute kubectl commands to verify that deployment and se
 ````
 kubectl create -f vegeta.yaml
 ````
-18.Copy [targets.txt] (https://github.com/vaishalinankani08/CloudNative-Observability/blob/gh-pages/targets.txt),json file's representing rest api's [addvoter.json](https://github.com/vaishalinankani08/CloudNative-Observability/blob/gh-pages/addvoter.json)and vegeta binary [vegeta](https://github.com/tsenart/vegeta/releases/download/v12.8.4/vegeta_12.8.4_linux_amd64.tar.gz) in vegeta pod at path /tmp.
+18.Copy [targets.txt] (https://github.com/vaishalinankani08/CloudNative-Observability/blob/gh-pages/targets.txt) , json file's representing rest api's [addvoter.json](https://github.com/vaishalinankani08/CloudNative-Observability/blob/gh-pages/addvoter.json)and vegeta binary [vegeta](https://github.com/tsenart/vegeta/releases/download/v12.8.4/vegeta_12.8.4_linux_amd64.tar.gz) in vegeta pod at path /tmp.
 ````
  kubectl cp vegeta default/http-client:/tmp/vegeta
  kubectl cp targets.txt default/http-client:/tmp/targets.txt
