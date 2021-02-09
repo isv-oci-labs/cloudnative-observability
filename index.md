@@ -81,7 +81,11 @@ sudo docker push ap-mumbai-1.ocir.io/bme8mxy3zkua/testimages/votingservice:perf
 sudo docker push ap-mumbai-1.ocir.io/bme8mxy3zkua/testimages/vegeta:test
 ````
 13.Create namespace for application deployment.
+
+````
  kubectl create namespace app
+````
+
 14.Create kubernetes secret for accessing the secured image from OCIR registry
 
  ````
