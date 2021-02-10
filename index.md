@@ -9,7 +9,7 @@ visualization of  the metric data collected by  prometheus.
 
 
 # Steps
- 1.setup a kubernetes cluster with 3 worker nodes using OKE.
+ 1.Setup a kubernetes cluster with 3 worker nodes using OKE.
 
  2.Install oci-cli using below commands
 ```
@@ -28,17 +28,17 @@ chmod +x ./kubectl
 sudo mv ./kubectl /usr/local/bin/kubectl
 chmod 400 /home/opc/.kube/config
 ```   
-5.Install helm version 3 as per the instruction at below mentioned url
+5.Install helm version 3 as per the instruction at url
 https://helm.sh/docs/intro/install/
 ```
 $ curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
 $ chmod 700 get_helm.sh
 $ ./get_helm.sh
 ```
-6.Install metric server as per the instruction at below mentioned url
+6.Install metric server as per the instruction at url
 https://github.com/kubernetes-sigs/metrics-server
 
-7.Install docker engine on bashion host as per the instruction at below mentioned url
+7.Install docker engine on bashion host as per the instruction at url
 https://blogs.oracle.com/virtualization/install-docker-on-oracle-linux-7-v2
 
 8.Pull docker image from docker hub
@@ -141,7 +141,7 @@ service.beta.kubernetes.io/oci-load-balancer-shape: 10Mbps
 #Installation of grafana using corresponding helm chart
  helm install  grafana stable/grafana
  ````
-22. Edit serviceType to loadBalancer in grafana service resource/actuator/prometheus
+22.Edit serviceType to loadBalancer in grafana service resource/actuator/prometheus
 ````
  kubectl edit svc grafana -n default
  service.beta.kubernetes.io/oci-load-balancer-shape: 10Mbps
@@ -149,7 +149,7 @@ service.beta.kubernetes.io/oci-load-balancer-shape: 10Mbps
 ![oci_grafana_screen](https://user-images.githubusercontent.com/77958988/107274579-9a291180-6a76-11eb-82cc-e8ced78d707c.png)
 
 
-23.run script [traffic_run.sh](https://github.com/vaishalinankani08/CloudNative-Observability/blob/gh-pages/traffic_run.sh) in one terminal to pump the traffic and in another terminal execute this command to verify that
+23.Run script [traffic_run.sh](https://github.com/vaishalinankani08/CloudNative-Observability/blob/gh-pages/traffic_run.sh) in one terminal to pump the traffic and in another terminal execute this command to verify that
 application metrics are exposed at /actuator/prometheus
 ````
 #terminal1
