@@ -20,7 +20,7 @@ visualization of  the metric data collected by  prometheus.
  3.Set up the cluster access
 ![image](https://user-images.githubusercontent.com/77958988/106737640-eb7f6e00-663c-11eb-9bb1-31350f732107.png)
 
- 4.Install kubectl
+ 4.Install kubectl with below commands
  
 ```
 curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"
