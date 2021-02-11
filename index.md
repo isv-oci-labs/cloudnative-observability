@@ -44,7 +44,7 @@ https://blogs.oracle.com/virtualization/install-docker-on-oracle-linux-7-v2
 8.Pull docker image from docker hub
 ```
 sudo docker login -u vaishalinankani08
-sudo docker pull vaishalinankani08/votingservice:test
+sudo docker pull vaishalinankani08/vegeta:test
 sudo docker pull vaishalinankani08/votingservice:perf
 ```
 9.Generate auth token by navigating to the User details page.
