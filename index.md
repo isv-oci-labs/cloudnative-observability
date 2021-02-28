@@ -229,7 +229,7 @@ Use the decoded password to login to the grafana with username as admin.Change t
 
 ![image](https://user-images.githubusercontent.com/77958988/107403913-ae7b1600-6b2b-11eb-8689-89c54c50a3bc.png)
 
-29.Import json dashborad for application to visualize registration rate,registration success rate as well as container cpu & memory stats
+29.Import JSON dashborad created for application to visualize registration rate,registration success rate as well as container cpu & memory stats
   ![image](https://user-images.githubusercontent.com/77958988/107405450-59400400-6b2d-11eb-87fb-a4beb8d9fdb2.png)
   
    Upload  [votingApp](https://github.com/vaishalinankani08/CloudNative-Observability/blob/gh-pages/votingservice.json) dashboard json file
