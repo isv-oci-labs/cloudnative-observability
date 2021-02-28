@@ -21,7 +21,8 @@ visualization of  the metric data collected by  prometheus.
 
 tenancy information
 
-![tenancyinfo](https://user-images.githubusercontent.com/77958988/109422343-2b016600-7a01-11eb-92f6-a820ae577b7d.png)
+![tenancyinfo](https://user-images.githubusercontent.com/77958988/109422393-58e6aa80-7a01-11eb-911c-a2a34c29d9aa.png)
+
 
 
 ```
