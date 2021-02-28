@@ -74,14 +74,13 @@ sudo docker pull vaishalinankani08/votingservice:perf
 10.Login to docker registry
 ```
 sudo docker login <region>.ocir.io
-example:
-sudo docker login ap-mumbai-1.ocir.io
 #enter username as per the below format
 username:<tenancynamespace>/<username>
-Example username:
-username:bme8mxy3zkua/oracleidentitycloudservice/vaishali.nankani@oracle.com
 password:authtoken generated in step 9
 ```
+![dockerlogin](https://user-images.githubusercontent.com/77958988/109424695-a9aed100-7a0a-11eb-8895-96d0e76dc59e.png)
+
+
 11.Tag docker images appropriately using the tenancynamespace and preferred OCIR registry name
 ```
 sudo docker tag vaishalinankani08/vegeta:test <region>.ocir.io/<tenancynamespace>/testimages/vegeta:test
