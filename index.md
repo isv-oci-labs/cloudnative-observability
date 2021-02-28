@@ -170,8 +170,8 @@ service.beta.kubernetes.io/oci-load-balancer-shape: 10Mbps
 ![oci_grafana_screen](https://user-images.githubusercontent.com/77958988/107274579-9a291180-6a76-11eb-82cc-e8ced78d707c.png)
 
 
-23.Run script [traffic_run.sh](https://github.com/vaishalinankani08/CloudNative-Observability/blob/gh-pages/traffic_run.sh) in one terminal to pump the traffic and in another terminal execute this command to verify that
-application metrics are exposed at /actuator/prometheus
+23.Run script [traffic_run.sh](https://github.com/vaishalinankani08/CloudNative-Observability/blob/gh-pages/traffic_run.sh) in one terminal to pump the traffic 
+and in another terminal execute  command to verify that application metrics are exposed at /actuator/prometheus
 ````
 #terminal1
 ./traffic_run.sh
