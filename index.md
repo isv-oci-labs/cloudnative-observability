@@ -14,7 +14,7 @@ visualization of  the metric data collected by  prometheus.
  
    
    Set up  bashion host with below configuration:
- ![bashionhost](https://user-images.githubusercontent.com/77958988/109423772-c9dc9100-7a06-11eb-86e0-59be7fb62161.png)
+![bashionhost](https://user-images.githubusercontent.com/77958988/109423858-35266300-7a07-11eb-8d97-8ce990430735.png)
 
  2.Install oci-cli on bashion host using below commands . 
 
