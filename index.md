@@ -10,8 +10,10 @@ visualization of  the metric data collected by  prometheus.
 
 # Steps
  1.Setup a kubernetes cluster with 3 worker nodes using OKE.
+   Follow this tutorial :  https://www.oracle.com/webfolder/technetwork/tutorials/obe/oci/oke-full/index.html) 
 
- 2.Install oci-cli on bashion host using below commands 
+ 2.Install oci-cli on bashion host using below commands . "oci set config" command will ask for user OCID,tenancy OCID and region.
+ user OCID is shown in user profile information and tenancy OCID is shown in tenancy information
 ```
    bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"
    oci -v
