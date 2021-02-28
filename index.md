@@ -142,7 +142,7 @@ kubectl create -f vegeta.yaml
 helm repo add stable https://charts.helm.sh/stable
 helm install  prometheus stable/prometheus
 ````
-20.Edit serviceType to LoadBalancer in prometheus service resource using below command so as to access the prometheus server GUI through browser
+20.Edit serviceType to LoadBalancer in prometheus k8s service resource using below command so as to access the prometheus server GUI through browser
 ````
 kubectl edit svc prometheus-server -n default
 
@@ -162,7 +162,7 @@ service.beta.kubernetes.io/oci-load-balancer-shape: 10Mbps
 #Installation of grafana using corresponding helm chart
  helm install  grafana stable/grafana
  ````
-22.Edit serviceType to LoadBalancer in grafana service resource so as to access the grafana GUI through browser
+22.Edit serviceType to LoadBalancer in grafana k8s service resource so as to access the grafana GUI through browser
 ````
  kubectl edit svc grafana -n default
  service.beta.kubernetes.io/oci-load-balancer-shape: 10Mbps
