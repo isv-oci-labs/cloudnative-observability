@@ -11,7 +11,9 @@ visualization of  the metric data collected by  prometheus.
 # Steps
  1.Setup a kubernetes cluster with 3 worker nodes using OKE.
    Follow this tutorial :  https://www.oracle.com/webfolder/technetwork/tutorials/obe/oci/oke-full/index.html) 
- and set up  bashion host with below configuration
+ 
+   
+   Set up  bashion host with below configuration:
  ![bashionhost](https://user-images.githubusercontent.com/77958988/109423772-c9dc9100-7a06-11eb-86e0-59be7fb62161.png)
 
  2.Install oci-cli on bashion host using below commands . 
