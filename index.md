@@ -236,7 +236,7 @@ Use the decoded password to login to the grafana with username as admin.Change t
   ![grafanaimport](https://user-images.githubusercontent.com/77958988/107408156-98bc1f80-6b30-11eb-8ef3-487caf2f10f4.png)
    
    Panels for Registration Rate,Registration Success Rate as well as Container CPU & Memory Utilization are present in application 
-   dashboard and can be used to see the panel for registration rate,registration success rate as well as container cpu & memory stats
+   dashboard and can be used to see registration rate,registration success rate as well as container cpu & memory stats
    
    Registration Rate:
    
