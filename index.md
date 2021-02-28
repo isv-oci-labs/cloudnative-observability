@@ -148,6 +148,9 @@ kubectl edit svc prometheus-server -n default
 #Add this annotation in the annotations section of the service resource
 service.beta.kubernetes.io/oci-load-balancer-shape: 10Mbps
 ````
+![loadbalancer](https://user-images.githubusercontent.com/77958988/109425773-0791e780-7a10-11eb-8b07-c586ae450656.png)
+
+
 ![oci_prometheus](https://user-images.githubusercontent.com/77958988/107274095-01929180-6a76-11eb-8de8-4fec89379f58.png)
 21.Install grafana in kubernetes cluster so as to visualize application statistics
 ````
