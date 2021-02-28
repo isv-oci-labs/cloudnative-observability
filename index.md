@@ -21,7 +21,8 @@ visualization of  the metric data collected by  prometheus.
 
 tenancy information
 
-![tenancyinfo](https://user-images.githubusercontent.com/77958988/109422264-d6f68180-7a00-11eb-9b2d-fc523f960581.png)
+![tenancyinfo](https://user-images.githubusercontent.com/77958988/109422343-2b016600-7a01-11eb-92f6-a820ae577b7d.png)
+
 
 ```
    bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"
