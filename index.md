@@ -212,7 +212,7 @@ sum(rate(votingService_voterRegistration_tx_responses_total{HttpStatusCode=~"2.*
 ![image](https://user-images.githubusercontent.com/77958988/107340205-8071e380-6ae3-11eb-8e05-252e1b3828f9.png)
 
 
-28.Grafana password needs to be decoded from kubernetes secret resource and use below command to extract the initial password .
+28.Grafana' admin user password needs to be decoded from kubernetes secret resource . use below command to extract the admin user's password .
 ````
 kubectl edit secret grafana -n default
 ````
@@ -223,13 +223,13 @@ decode password using [base64decode](https://www.base64decode.org/)
 ![base64decode](https://user-images.githubusercontent.com/77958988/107393868-4293b000-6b21-11eb-8e8b-2108f3d7f677.png)
 
 
-Use the decoded password to login to the grafana with username as admin.change the grafana loginpassword
+Use the decoded password to login to the grafana with username as admin.Change the admin user's password.
 
 ![grafanachan](https://user-images.githubusercontent.com/77958988/107396227-97382a80-6b23-11eb-956a-d3a5c460f435.png)
 
 ![image](https://user-images.githubusercontent.com/77958988/107403913-ae7b1600-6b2b-11eb-8689-89c54c50a3bc.png)
 
-29.Import json dashborad for application to visualize registration rate,registration success rate as well as container cpu & memory
+29.Import json dashborad for application to visualize registration rate,registration success rate as well as container cpu & memory stats
   ![image](https://user-images.githubusercontent.com/77958988/107405450-59400400-6b2d-11eb-87fb-a4beb8d9fdb2.png)
   
    Upload  [votingApp](https://github.com/vaishalinankani08/CloudNative-Observability/blob/gh-pages/votingservice.json) dashboard json file
