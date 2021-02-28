@@ -91,12 +91,12 @@ sudo docker tag vaishalinankani08/votingservice:perf ap-mumbai-1.ocir.io/bme8mxy
 ```
 12.Push docker images to OCIR registry
 ````
-sudo docker push <region>.ocir.io/<tenancynamespace>/testimages/vegeta:tes
+sudo docker push <region>.ocir.io/<tenancynamespace>/testimages/vegeta:test
 example
 sudo docker push ap-mumbai-1.ocir.io/bme8mxy3zkua/testimages/votingservice:perf
 sudo docker push ap-mumbai-1.ocir.io/bme8mxy3zkua/testimages/vegeta:test
 ````
-13.Create namespace for application deployment.
+13.Create namespace("app") for application deployment.
 
 ````
  kubectl create namespace app
