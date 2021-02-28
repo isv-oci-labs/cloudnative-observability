@@ -14,12 +14,12 @@ visualization of  the metric data collected by  prometheus.
 
  2.Install oci-cli on bashion host using below commands . "oci set config" command will ask for user OCID,tenancy OCID and region.
  user OCID is shown in user profile information and tenancy OCID is shown in tenancy information
- user profile information
+ User Profile Information
 ![userprof](https://user-images.githubusercontent.com/77958988/109422219-a3b3f280-7a00-11eb-96bc-f0a5d988de04.png)
 
 ![userp](https://user-images.githubusercontent.com/77958988/109422243-be866700-7a00-11eb-9f41-67c24dc44f77.png)
 
-tenancy information
+Tenancy Information
 
 ![tenancyinfo](https://user-images.githubusercontent.com/77958988/109422393-58e6aa80-7a01-11eb-911c-a2a34c29d9aa.png)
 
