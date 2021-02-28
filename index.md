@@ -102,7 +102,7 @@ sudo docker push ap-mumbai-1.ocir.io/bme8mxy3zkua/testimages/vegeta:test
  kubectl create namespace app
 ````
 
-14.Create kubernetes secret for accessing the secured image from OCIR registry
+14.Create kubernetes secret for accessing the docker images from OCIR registry
 
  ````
 kubectl create secret -n app docker-registry <secret-name> --docker-server=<region-id>.ocir.io --docker-username='<cloud-account-username>' --docker-password='<auth-token>' --docker-email='<cloud-account-emailid>'
