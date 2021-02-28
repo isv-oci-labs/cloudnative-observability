@@ -130,12 +130,11 @@ Execute below command. Execute kubectl commands to verify that deployment and se
 ````
 kubectl create -f vegeta.yaml
 ````
-18.Copy [targets.txt](https://github.com/vaishalinankani08/CloudNative-Observability/blob/gh-pages/targets.txt) , json file's representing rest api's [addvoter.json](https://github.com/vaishalinankani08/CloudNative-Observability/blob/gh-pages/addvoter.json)and vegeta binary [vegeta](https://github.com/tsenart/vegeta/releases/download/v12.8.4/vegeta_12.8.4_linux_amd64.tar.gz) in vegeta pod at path /tmp.
+18.Copy [targets.txt](https://github.com/vaishalinankani08/CloudNative-Observability/blob/gh-pages/targets.txt) , json file [addvoter.json] representing rest api's(https://github.com/vaishalinankani08/CloudNative-Observability/blob/gh-pages/addvoter.json) and vegeta binary [vegeta](https://github.com/tsenart/vegeta/releases/download/v12.8.4/vegeta_12.8.4_linux_amd64.tar.gz) in vegeta pod at path /tmp.
 ````
  kubectl cp vegeta default/http-client:/tmp/vegeta
  kubectl cp targets.txt default/http-client:/tmp/targets.txt
- kubectl cp addvoter.json default/http-client:/tmp/addvoter.json
- kubectl cp addvoter_badreq.json default/http-client:/tmp/addvoter_badreq.json
+ kubectl cp addvoter.json default/http-client:/tmp/addvoter.json 
 ````
 19.Install prometheus in kubernetes cluster so as to fetch application metrics from application
 ````
@@ -143,7 +142,7 @@ kubectl create -f vegeta.yaml
 helm repo add stable https://charts.helm.sh/stable
 helm install  prometheus stable/prometheus
 ````
-20.Edit serviceType to loadBalancer in prometheus service resource using below command
+20.Edit serviceType to LoadBalancer in prometheus service resource using below command so as to access the prometheus server GUI through browser
 ````
 kubectl edit svc prometheus-server -n default
 #Add this annotation in the annotations section of the service resource
@@ -157,7 +156,7 @@ service.beta.kubernetes.io/oci-load-balancer-shape: 10Mbps
 #Installation of grafana using corresponding helm chart
  helm install  grafana stable/grafana
  ````
-22.Edit serviceType to loadBalancer in grafana service resource/actuator/prometheus
+22.Edit serviceType to LoadBalancer in grafana service resource so as to access the grafana GUI through browser
 ````
  kubectl edit svc grafana -n default
  service.beta.kubernetes.io/oci-load-balancer-shape: 10Mbps
