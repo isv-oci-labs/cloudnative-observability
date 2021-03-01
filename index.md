@@ -14,6 +14,8 @@ visualization of  the metric data collected by  prometheus.
  
    
    Set up  bashion host with below configuration:
+   tutorial for launching  Compute Instance(https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/launchinginstance.htm)
+   
 ![bashionhost](https://user-images.githubusercontent.com/77958988/109423858-35266300-7a07-11eb-8d97-8ce990430735.png)
 
  2.Install oci-cli on bashion host using below commands . 
