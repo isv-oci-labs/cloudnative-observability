@@ -13,7 +13,7 @@ visualization of  the metric data collected by  prometheus.
    Follow this tutorial :  https://www.oracle.com/webfolder/technetwork/tutorials/obe/oci/oke-full/index.html) 
  
    
-   Set up  bashion host with below configuration:
+   Set up  bashion host with below configuration in the vcn where k8s cluster is present:
    
    Tutorial for launching Compute Instance(https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/launchinginstance.htm)
    
